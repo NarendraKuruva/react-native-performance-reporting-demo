@@ -9,6 +9,7 @@ export const NavigationKeys = {
   NESTED_PROFILER_CONTEXT: 'NestedProfilerContext' as const,
   NESTED_CONTEXT_SCREEN: 'NestedContextScreen' as const,
   INNER_NESTED_CONTEXT_SCREEN: 'InnerNestedContextScreen' as const,
+  FLASHLIST_SCREEN: 'FlashListScreen' as const,
 };
 
 type ValueOf<T> = T[keyof T];

@@ -52,6 +52,10 @@ export const ExamplesScreen = () => {
             title: 'Nested Context Screen',
             destination: NavigationKeys.NESTED_PROFILER_CONTEXT,
           },
+          {
+            title: 'FlashList Screen',
+            destination: NavigationKeys.FLASHLIST_SCREEN,
+          },
         ]}
         renderItem={({item}) => (
           <TouchableOpacity

@@ -3,7 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {PerformanceProfiler, LogLevel} from '@shopify/react-native-performance';
 import {ApolloClient, ApolloProvider, InMemoryCache} from '@apollo/client';
-import {init, track} from '@amplitude/analytics-react-native';
+import {track} from '@amplitude/analytics-react-native';
 
 import {ExamplesScreen} from './examples';
 import PerformanceScreen from './examples/PerformanceScreen';
@@ -14,8 +14,7 @@ import NestedNavigationScreen from './examples/NestedNavigationScreen';
 import NestedContextScreen, {
   InnerNestedContextScreen,
 } from './examples/NestedContextScreen';
-
-init('a0234a30aef9b2c6b7c0ac64e585d867');
+import FlashListScreen from './examples/FlashListScreen';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -46,6 +45,11 @@ const NavigationTree = () => {
         <Stack.Screen
           name={NavigationKeys.NESTED_PROFILER_CONTEXT}
           component={NestedProfilerNavigationTree}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={NavigationKeys.FLASHLIST_SCREEN}
+          component={FlashListScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
